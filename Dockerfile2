@@ -1,0 +1,16 @@
+# from base image node
+FROM node:8.11-slim
+
+# command executable and version
+CMD ["-v"]
+ENTRYPOINT ["node"]
+
+# Modifying existing code from node:8.11-slim to ubuntu
+FROM ubuntu
+CMD ["-v"]
+ENTRYPOINT ["ubuntu"]
+
+# Adding a tag version for ubuntu testing 18.04
+FROM ubuntu:18.04
+CMD ["-v"]
+ENTRYPOINT ["ubuntu:18.04"]
